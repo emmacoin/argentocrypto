@@ -1,0 +1,26 @@
+[Unit]
+Description=YUP's distributed currency daemon
+After=network.target
+
+[Service]
+User=yup
+Group=yup
+
+Type=forking
+PIDFile=/var/lib/yupd/yupd.pid
+
+ExecStart=/usr/bin/yupd -daemon -pid=/var/lib/yupd/yupd.pid \
+          -conf=/etc/yup/yup.conf -datadir=/var/lib/yupd
+
+ExecStop=-/usr/bin/yup-cli -conf=/etc/yup/yup.conf \
+         -datadir=/var/lib/yupd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

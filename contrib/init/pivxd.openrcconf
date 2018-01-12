@@ -1,0 +1,26 @@
+# /etc/conf.d/yupd: config file for /etc/init.d/yupd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/yup/yup.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/yupd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/yupd.pid"
+
+# Where to write yupd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/yupd"
+
+# User and group to own yupd process
+#BITCOIND_USER="yup"
+#BITCOIND_GROUP="yup"
+
+# Path to yupd executable
+#BITCOIND_BIN="/usr/bin/yupd"
+
+# Nice value to run yupd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

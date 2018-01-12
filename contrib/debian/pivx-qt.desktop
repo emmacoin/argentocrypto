@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Yup
+Comment=Yup P2P Cryptocurrency
+Comment[fr]=Yup, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Yup, eşten eşe kriptografik sanal para birimi
+Exec=yup-qt %u
+Terminal=false
+Type=Application
+Icon=yup128
+MimeType=x-scheme-handler/yup;
+Categories=Office;Finance;
